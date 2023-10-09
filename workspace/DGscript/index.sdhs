@@ -1,0 +1,3 @@
+const var::string = a
+const var2::number = 10
+END
