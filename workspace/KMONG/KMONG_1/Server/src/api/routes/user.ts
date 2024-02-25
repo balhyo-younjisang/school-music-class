@@ -1,12 +1,11 @@
 import { Router } from "express";
-import Container from "typedi";
-import { UserContainer } from "../../container/userContainer";
+import { UserController } from "../../controller/userController";
 const route = Router();
 
 export default (app: Router) => {
   app.use("/users", route);
-  const container = new UserContainer();
+  const controller = new UserController();
 
-  route.route("/signup").post(container.handleSignUp);
-  route.route("/signin").post(container.handleSignIn);
+  route.route("/signup").post(controller.handleSignUp);
+  route.route("/signin").post(controller.handleSignIn);
 };

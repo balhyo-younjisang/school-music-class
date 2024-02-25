@@ -1,9 +1,8 @@
 import { Response, Request } from "express";
 import Container from "typedi";
-import { PasswordDoNotMatchError } from "../error/error";
 import { UserService } from "../service/userService";
 
-export class UserContainer {
+export class UserController {
   serviceInstance: any;
 
   constructor() {
